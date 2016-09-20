@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task_01</title>
+    <link href="style/index.css" rel="stylesheet" type="text/css">
+    <script>
+        window.onload = function () {
+            var oBtn = document.getElementById('btn');
+            var oShow = document.getElementById('show');
+            var oSet = document.querySelector('.set');
+
+            oBtn.onclick =function () {
+                oSet.style.display = 'block';
+            };
+            var oRed = document.querySelector('.red');
+            oRed.onmouseover = function () {
+                oShow.style.background = 'red';
+            };
+            var oYellow = document.querySelector('.yellow');
+            oYellow.onmouseover = function () {
+                oShow.style.background = 'yellow';
+            };
+            var oBlue = document.querySelector('.blue');
+            oBlue.onmousemove = function () {
+                oShow.style.background = 'blue';
+            };
+            var oW_200 = document.querySelector('.w_200');
+            oW_200.onmousemove = function () {
+                oShow.style.width = '200px';
+            };
+            var oW_300 = document.querySelector('.w_300');
+            oW_300.onmousemove = function () {
+                oShow.style.width = '300px';
+            };
+            var oW_400 = document.querySelector('.w_400');
+            oW_400.onmousemove = function () {
+                oShow.style.width = '400px';
+            };
+            var oH_200 = document.querySelector('.h_200');
+            oH_200.onmousemove = function () {
+                oShow.style.height = '200px';
+            };
+            var oH_300 = document.querySelector('.h_300');
+            oH_300.onmousemove = function () {
+                oShow.style.height = '300px';
+            };
+            var oH_400 = document.querySelector('.h_400');
+            oH_400.onmousemove = function () {
+                oShow.style.height = '400px';
+            };
+            var oReset = document.querySelector('.reset');
+            oReset.onclick = function () {
+                oShow.style.background ='#fff';
+                oShow.style.width = '150px';
+                oShow.style.height = '150px';
+            };
+            var oConfirm = document.querySelector('.confirm');
+            oConfirm.onclick = function () {
+                oSet.style.display = 'none';
+            };
+        };
+    </script>
+</head>
+<body>
+<div class="content">
+    <div class="content_t">
+        <span>请为下面的div设置样式:</span>
+        <input id="btn" type="button" value="点击设置">
+    </div>
+    <div id="show"></div>
+    <div class="set">
+        <div class="main main_top_20">
+            <span>请选择背景色&nbsp;:&nbsp;</span>
+            <div class="red"><a href="#">红</a></div>
+            <div class="yellow"><a href="#">黄</a></div>
+            <div class="blue"><a href="#">蓝</a></div>
+        </div>
+        <div class="main">
+            <span>请选择宽(px)&nbsp;:&nbsp;</span>
+            <a class="w_200" href="#">200</a>
+            <a class="w_300" href="#">300</a>
+            <a class="w_400" href="#">400</a>
+        </div>
+        <div class="main">
+            <span>请选择高(px)&nbsp;:&nbsp;</span>
+            <a class="h_200" href="#">200</a>
+            <a class="h_300" href="#">300</a>
+            <a class="h_400" href="#">400</a>
+        </div>
+        <div class="main main_top_26">
+            <input class="reset" type="button" value="恢复">
+            <input class="confirm" type="button" value="确定">
+        </div>
+    </div>
+</div>
+</body>
+</html>
